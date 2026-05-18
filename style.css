@@ -1,0 +1,107 @@
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+}
+
+h1{
+    margin-top: 20px;
+
+}
+
+.controls{
+    margin: 15px;
+
+}
+
+button{
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#StartBtn{
+    background: #22c55e;
+    color: white;
+
+}
+
+#ResetBtn{
+    background: #ef4444;
+    color: white;
+
+}
+
+.stats{
+    margin: 10px;
+    font-size: 18px;
+
+}
+.Game{
+    display: grid;
+    grid-template-columns: repeat(4,90px);
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card{
+    width: 90px;
+    height: 90px;
+    perspective: 1000px;
+
+}
+.inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card.flipped .inner{
+    transform: rotateY(180deg);
+
+}
+
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    backface-visibility: hidden;
+}
+
+.front{
+    background: #f8fafc;
+    color: black;
+    transform: rotateY(180deg);
+
+}
+
+.back{
+    background: #334155;
+}
+
+
+.card.matched .inner{
+    transform: rotateY(180deg);
+
+}
+
+.card.matched .front{
+    background: #22c55e;
+    color: white;
+}
+.card.matched{
+    pointer-events: none;
+}
