@@ -23,6 +23,16 @@ button{
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
+    transition:0.2s;
+    box-shadow:0 4px 8px rgba(0,0,0,0.3);
+}
+button:active{
+    transform:scale(0.95);
+
+    box-shadow:
+        inset 0 4px 8px rgba(0,0,0,0.6);
+
+    filter:brightness(70%);
 }
 
 #StartBtn{
